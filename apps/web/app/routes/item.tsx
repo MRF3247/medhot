@@ -81,6 +81,18 @@ function hostOf(url: string): string {
   }
 }
 
+/** 论文 DOI：链接是 doi.org 解析地址时取出 10.xxxx/yyy，方便直接引用。 */
+function doiOf(url: string): string | null {
+  try {
+    const u = new URL(url);
+    if (u.hostname.replace(/^www\./, "") !== "doi.org") return null;
+    const doi = decodeURIComponent(u.pathname.replace(/^\//, "")).trim();
+    return doi.length > 0 ? doi : null;
+  } catch {
+    return null;
+  }
+}
+
 async function shareOrCopy(item: Pick<SiteItemDetail, "id" | "title">): Promise<"shared" | "copied" | null> {
   const url = `${siteUrl()}/items/${item.id}`;
   try {
@@ -191,12 +203,16 @@ export default function ItemPage() {
 
   // Rails: the piece's facts on the left (wide screens), the editor's notes on the right, the outline
   // under the facts (or under the notes when only the right rail shows).
+  const doi = isX ? null : doiOf(item.links.original);
   const facts = (
     <RailSection title="来源">
       <div className="text-[14px] font-semibold leading-snug text-ink">{isX ? item.x!.authorName : item.source.name}</div>
       <div className="mt-1 text-[12.5px] leading-relaxed text-ink-3">
         {isX ? `@${item.x!.handle} · X` : item.author ?? hostOf(item.links.original)}
       </div>
+      {doi && (
+        <div className="mono mt-2 select-all break-all text-[12px] leading-relaxed text-ink-3">DOI {doi}</div>
+      )}
       <div className="mt-3 text-[12px] text-ink-4">发布时间</div>
       <time dateTime={publishedIso} className="mono mt-0.5 block text-[12.5px] text-ink-2">
         {fullDateTime(publishedIso)}
@@ -358,6 +374,7 @@ export default function ItemPage() {
               {isX ? item.x!.authorName : item.source.name}
             </a>
             <span> · {hostOf(item.links.original)}</span>
+            {doi && <span className="mono"> · DOI {doi}</span>}
           </p>
 
           {item.tags.length > 0 && (
