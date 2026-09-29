@@ -5,12 +5,19 @@
       "id": "rss-nature",
       "name": "Nature",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nature.com/nature.rss", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.nature.com/nature.rss",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -18,12 +25,19 @@
       "id": "rss-nature-medicine",
       "name": "Nature Medicine",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nature.com/nm.rss", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.nature.com/nm.rss",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -31,12 +45,19 @@
       "id": "rss-nature-biotechnology",
       "name": "Nature Biotechnology",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nature.com/nbt.rss", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.nature.com/nbt.rss",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -44,12 +65,20 @@
       "id": "rss-nature-reviews-cancer",
       "name": "Nature Reviews Cancer",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nature.com/nrc.rss", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.nature.com/nrc.rss",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊", "肿瘤"],
+      "tags": [
+        "期刊",
+        "肿瘤"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -57,12 +86,19 @@
       "id": "rss-nejm",
       "name": "NEJM",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -70,12 +106,19 @@
       "id": "rss-nejm-evidence",
       "name": "NEJM Evidence",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=evid", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=evid",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -83,12 +126,19 @@
       "id": "rss-lancet",
       "name": "The Lancet",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.thelancet.com/rssfeed/lancet_current.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.thelancet.com/rssfeed/lancet_current.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -96,12 +146,20 @@
       "id": "rss-lancet-oncology",
       "name": "The Lancet Oncology",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.thelancet.com/rssfeed/lanonc_current.xml", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.thelancet.com/rssfeed/lanonc_current.xml",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊", "肿瘤"],
+      "tags": [
+        "期刊",
+        "肿瘤"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -109,12 +167,20 @@
       "id": "rss-lancet-infectious",
       "name": "The Lancet Infectious Diseases",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.thelancet.com/rssfeed/laninf_current.xml", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.thelancet.com/rssfeed/laninf_current.xml",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊", "感染"],
+      "tags": [
+        "期刊",
+        "感染"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -122,12 +188,19 @@
       "id": "rss-jama",
       "name": "JAMA",
       "kind": "rss",
-      "config": { "feedUrl": "https://jamanetwork.com/rss/site_3/67.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://jamanetwork.com/rss/site_3/67.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -135,12 +208,19 @@
       "id": "rss-cell",
       "name": "Cell",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.cell.com/cell/current.rss", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.cell.com/cell/current.rss",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -148,12 +228,19 @@
       "id": "rss-science-news",
       "name": "Science",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.science.org/rss/news_current.xml", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.science.org/rss/news_current.xml",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["期刊"],
+      "tags": [
+        "期刊"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -161,12 +248,19 @@
       "id": "rss-medrxiv",
       "name": "medRxiv 预印本",
       "kind": "rss",
-      "config": { "feedUrl": "https://connect.medrxiv.org/medrxiv_xml.php?subject=all", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://connect.medrxiv.org/medrxiv_xml.php?subject=all",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T1_5",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["预印本"],
+      "tags": [
+        "预印本"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -174,12 +268,19 @@
       "id": "rss-biorxiv",
       "name": "bioRxiv 预印本",
       "kind": "rss",
-      "config": { "feedUrl": "https://connect.biorxiv.org/biorxiv_xml.php?subject=all", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://connect.biorxiv.org/biorxiv_xml.php?subject=all",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1_5",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["预印本"],
+      "tags": [
+        "预印本"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -187,13 +288,20 @@
       "id": "rss-fda-press",
       "name": "FDA 新闻稿",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "fda",
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["监管机构"],
+      "tags": [
+        "监管机构"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -201,13 +309,21 @@
       "id": "rss-cdc-news",
       "name": "CDC 新闻",
       "kind": "rss",
-      "config": { "feedUrl": "https://tools.cdc.gov/api/v2/resources/media/316422.rss", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://tools.cdc.gov/api/v2/resources/media/316422.rss",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "cdc",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["监管机构", "公共卫生"],
+      "tags": [
+        "监管机构",
+        "公共卫生"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -215,13 +331,21 @@
       "id": "rss-who-news",
       "name": "WHO 新闻",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.who.int/rss-feeds/news-english.xml", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://www.who.int/rss-feeds/news-english.xml",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T1",
       "first_party": true,
       "owner_entity_id": "who",
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["监管机构", "公共卫生"],
+      "tags": [
+        "监管机构",
+        "公共卫生"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -229,12 +353,19 @@
       "id": "rss-stat-news",
       "name": "STAT News",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.statnews.com/feed/", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://www.statnews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["行业媒体"],
+      "tags": [
+        "行业媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -242,12 +373,19 @@
       "id": "rss-endpoints",
       "name": "Endpoints News",
       "kind": "rss",
-      "config": { "feedUrl": "https://endpts.com/feed/", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://endpts.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["行业媒体"],
+      "tags": [
+        "行业媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -255,12 +393,19 @@
       "id": "rss-biopharmadive",
       "name": "BioPharma Dive",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.biopharmadive.com/feeds/news/", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.biopharmadive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["行业媒体"],
+      "tags": [
+        "行业媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -268,12 +413,19 @@
       "id": "rss-healthcaredive",
       "name": "Healthcare Dive",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.healthcaredive.com/feeds/news/", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.healthcaredive.com/feeds/news/",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["行业媒体"],
+      "tags": [
+        "行业媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -281,12 +433,19 @@
       "id": "rss-medcitynews",
       "name": "MedCity News",
       "kind": "rss",
-      "config": { "feedUrl": "https://medcitynews.com/feed/", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://medcitynews.com/feed/",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["行业媒体"],
+      "tags": [
+        "行业媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -294,12 +453,20 @@
       "id": "rss-healthaffairs",
       "name": "Health Affairs",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.healthaffairs.org/action/showFeed?type=etoc&feed=rss&jc=hlthaff", "_aihot": { "initialBackfillLimit": 4 } },
+      "config": {
+        "feedUrl": "https://www.healthaffairs.org/action/showFeed?type=etoc&feed=rss&jc=hlthaff",
+        "_aihot": {
+          "initialBackfillLimit": 4
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 180,
-      "tags": ["行业媒体", "卫生政策"],
+      "tags": [
+        "行业媒体",
+        "卫生政策"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -307,12 +474,19 @@
       "id": "rss-medpagetoday",
       "name": "MedPage Today",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.medpagetoday.com/rss/headlines.xml", "_aihot": { "initialBackfillLimit": 6 } },
+      "config": {
+        "feedUrl": "https://www.medpagetoday.com/rss/headlines.xml",
+        "_aihot": {
+          "initialBackfillLimit": 6
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 60,
-      "tags": ["临床媒体"],
+      "tags": [
+        "临床媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -320,12 +494,19 @@
       "id": "rss-medscape",
       "name": "Medscape",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.medscape.com/cx/rssfeeds/2700.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.medscape.com/cx/rssfeeds/2700.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["临床媒体"],
+      "tags": [
+        "临床媒体"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -333,12 +514,19 @@
       "id": "rss-bbc-health",
       "name": "BBC Health",
       "kind": "rss",
-      "config": { "feedUrl": "https://feeds.bbci.co.uk/news/health/rss.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://feeds.bbci.co.uk/news/health/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["大众健康"],
+      "tags": [
+        "大众健康"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -346,12 +534,19 @@
       "id": "rss-npr-health",
       "name": "NPR Health",
       "kind": "rss",
-      "config": { "feedUrl": "https://feeds.npr.org/1128/rss.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://feeds.npr.org/1128/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["大众健康"],
+      "tags": [
+        "大众健康"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -359,12 +554,19 @@
       "id": "rss-nyt-health",
       "name": "NYT Health",
       "kind": "rss",
-      "config": { "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["大众健康"],
+      "tags": [
+        "大众健康"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -372,12 +574,19 @@
       "id": "rss-guardian-health",
       "name": "Guardian Health",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.theguardian.com/society/health/rss", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.theguardian.com/society/health/rss",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["大众健康"],
+      "tags": [
+        "大众健康"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     },
@@ -385,12 +594,1411 @@
       "id": "rss-sciencedaily-health",
       "name": "ScienceDaily 健康医学",
       "kind": "rss",
-      "config": { "feedUrl": "https://www.sciencedaily.com/rss/health_medicine.xml", "_aihot": { "initialBackfillLimit": 5 } },
+      "config": {
+        "feedUrl": "https://www.sciencedaily.com/rss/health_medicine.xml",
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
       "tier": "T2",
       "first_party": false,
       "participation_mode": "editorial",
       "interval_minutes": 120,
-      "tags": ["大众健康"],
+      "tags": [
+        "大众健康"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-bmj",
+      "name": "The BMJ",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0959-8138+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-annals",
+      "name": "Annals of Internal Medicine",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0003-4819+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-jama-im",
+      "name": "JAMA Internal Medicine",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2168-6106+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-jama-onc",
+      "name": "JAMA Oncology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2374-2437+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-jama-card",
+      "name": "JAMA Cardiology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2380-6583+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-plos-med",
+      "name": "PLOS Medicine",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1549-1676+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-circulation",
+      "name": "Circulation",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0009-7322+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-ehj",
+      "name": "European Heart Journal",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0195-668X+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-jacc",
+      "name": "Journal of the American College of Cardiology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0735-1097+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-gut",
+      "name": "Gut",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0017-5749+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-gastro",
+      "name": "Gastroenterology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0016-5085+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-jco",
+      "name": "Journal of Clinical Oncology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0732-183X+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-blood",
+      "name": "Blood",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0006-4971+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-diabetes-care",
+      "name": "Diabetes Care",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0149-5992+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-lancet-dm",
+      "name": "The Lancet Diabetes & Endocrinology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2213-8587+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-lancet-neuro",
+      "name": "The Lancet Neurology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1474-4422+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-cid",
+      "name": "Clinical Infectious Diseases",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1058-4838+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-icm",
+      "name": "Intensive Care Medicine",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0342-4642+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-radiology",
+      "name": "Radiology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0033-8419+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-pediatrics",
+      "name": "Pediatrics",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0031-4005+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-brain",
+      "name": "Brain",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0006-8950+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-eur-urol",
+      "name": "European Urology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0302-2838+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-cancer-cell",
+      "name": "Cancer Cell",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1535-6108+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-cell-research",
+      "name": "Cell Research",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1001-0602+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-sttt",
+      "name": "Signal Transduction and Targeted Therapy",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2095-9907+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-cmj",
+      "name": "Chinese Medical Journal",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0366-6999+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-j-hepatol",
+      "name": "Journal of Hepatology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A0168-8278+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-lancet-gh",
+      "name": "The Lancet Global Health",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A2214-109X+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "epmc-nrco",
+      "name": "Nature Reviews Clinical Oncology",
+      "kind": "json_list",
+      "config": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ISSN%3A1759-4774+AND+SRC%3AMED+AND+HAS_ABSTRACT%3AY&format=json&pageSize=25&sort=FIRST_PDATE_D+desc&resultType=core",
+        "itemsPath": "resultList.result",
+        "titlePaths": [
+          "title"
+        ],
+        "summaryPaths": [
+          "abstractText"
+        ],
+        "summaryIsBody": true,
+        "authorPaths": [
+          "authorString"
+        ],
+        "publishedAtPath": "firstPublicationDate",
+        "externalIdPath": "doi",
+        "urlTemplate": "https://doi.org/{doi}",
+        "urlTemplateFallback": "https://pubmed.ncbi.nlm.nih.gov/{id}/",
+        "ingestNoiseFilter": {
+          "dropMarkersTitleOnly": [
+            "erratum",
+            "corrigendum",
+            "author correction",
+            "correction to",
+            "issue information",
+            "table of contents",
+            "in this issue",
+            "editorial board"
+          ]
+        },
+        "_aihot": {
+          "initialBackfillLimit": 5
+        }
+      },
+      "tier": "T1",
+      "first_party": true,
+      "participation_mode": "editorial",
+      "interval_minutes": 60,
+      "tags": [
+        "期刊",
+        "Europe PMC"
+      ],
       "site_fulltext": false,
       "syndicate_fulltext": false
     }

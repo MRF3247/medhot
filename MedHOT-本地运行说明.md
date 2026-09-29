@@ -60,9 +60,12 @@ cd /Users/Jin/Documents/GitProgram/MedHOT
 
 **压住**：药企新闻稿与卫星会推广（`sig ≤ 3`）、会议通知/征稿/招生/招聘/促销（`sig ≤ 2`）、泛健康养生与无出处的「某研究称」（`sig ≤ 3` 且 `cred ≤ 3`）、只有细胞或动物实验却给患者结论（`sig ≤ 3`）、只有会议摘要没有完整数据（`nov ≤ 3`）、多话题盘点（`sig ≤ 3`）、预印本（`cred ≤ 5` 且摘要必须点明未经同行评议）、无临床终点的器械装机与展会新闻。
 
-## 信源（30 个，均已实测可抓）
+## 信源（59 个，均已实测可抓）
 
 - **期刊**（T1，官网一手）：Nature、Nature Medicine、Nature Biotechnology、Nature Reviews Cancer、NEJM、NEJM Evidence、The Lancet、The Lancet Oncology、The Lancet Infectious Diseases、JAMA、Cell、Science
+- **期刊论文（Europe PMC，带 DOI）**（T1，共 29 个源）：走 Europe PMC 官方接口 `ISSN:<刊号> AND SRC:MED AND HAS_ABSTRACT:Y`，按**最早发表日期倒序**取最新论文，只收有摘要的（所以不会混进来信、勘误这类没摘要的条目）。每条都是 **DOI 链接**（`https://doi.org/10.xxxx`）+ 摘要正文，不需要再抓出版社页面：
+  The BMJ、Annals of Internal Medicine、JAMA Internal Medicine、JAMA Oncology、JAMA Cardiology、PLOS Medicine、Circulation、European Heart Journal、JACC、Gut、Gastroenterology、Journal of Clinical Oncology、Blood、Diabetes Care、The Lancet Diabetes & Endocrinology、The Lancet Neurology、Clinical Infectious Diseases、Intensive Care Medicine、Radiology、Pediatrics、Brain、European Urology、Cancer Cell、Cell Research、Signal Transduction and Targeted Therapy、Chinese Medical Journal、Journal of Hepatology、The Lancet Global Health、Nature Reviews Clinical Oncology
+  > 想加刊：在后台「信源 → 新建」选 `json_list`，照抄任意一个 `epmc-*` 源的配置，把 URL 里的 ISSN 换成目标刊的刊号即可（刊号在 PubMed 的期刊页能查到）。注意同一篇论文如果既有出版社 RSS 又有 Europe PMC 两个源，会以两个来源进来，最终在**事件层**合并成同一件事。
 - **预印本**（T1_5）：medRxiv、bioRxiv
 - **监管与公共卫生**（T1，官方一手）：FDA 新闻稿、CDC 新闻、WHO 新闻
 - **行业媒体**（T2）：STAT News、Endpoints News、BioPharma Dive、Healthcare Dive、MedCity News、Health Affairs
