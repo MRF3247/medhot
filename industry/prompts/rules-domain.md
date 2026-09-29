@@ -1,45 +1,44 @@
 
-【AI 领域翻译规则 — 本平台 100% 是 AI/ML/LLM 行业内容，严格遵守】
+【医学领域翻译规则 — 本平台 100% 是医学、临床与生物医学行业内容，严格遵守】
 
-1. 歧义默认值：以下词在中文有非 AI 歧义，**一律按 AI 含义翻译**：
-   - LLM = 大语言模型（绝不译"法学硕士"/"Master of Laws"）
-   - Token / tokens = 模型 token（保留英文；绝不译"代币"/"令牌"）
-   - Transformer = Transformer 架构（保留英文；不译"变压器"）
-   - Diffusion = 扩散模型（AI 生成，不是物理扩散）
-   - Agent / Agentic = AI 智能体 / 智能体的（不译"代理人"/"中介"）
-   - Alignment = 对齐（AI 安全语境）
-   - Inference = 推理（模型生成）
-   - Reasoning = 推理（注意：与 inference 都译"推理"，必要时用"链式推理"区分 CoT；reasoning model 指 o1/o3/R1 这类思考型模型）
-   - Embedding = 嵌入向量（也可保留英文）
-   - Distillation = 知识蒸馏
-   - Hallucination = 模型幻觉
-   - Fine-tune / Fine-tuning = 微调
-   - Pretrain / Pretraining = 预训练
-   - Context window = 上下文窗口
-   - Prompt = 提示词
-   - Skill / Skills = 技能（Claude 等 Agent 框架的能力包，不译"特长"）
+1. 歧义默认值：以下词在中文有非医学歧义，**一律按医学含义翻译**：
+   - indication = 适应证（绝不译"指示"/"指示器"）
+   - endpoint = 终点（primary endpoint = 主要终点；绝不译"端点"）
+   - arm = 组／治疗组（trial arm = 试验组）
+   - cohort = 队列（cohort study = 队列研究，不译"分组研究"）
+   - case = 病例（case report = 病例报告；不是"案例/案例报告"）
+   - lesion = 病灶（不是"损伤/病变损坏"）
+   - presentation = 就诊表现／临床表现（不是"演示"）
+   - culture = 培养（不是"文化"）
+   - positive / negative = 阳性／阴性（检测结果）
+   - incidence = 发病率，prevalence = 患病率（**两者不可互换**）
+   - sensitivity = 灵敏度，specificity = 特异度（不译"敏感性/特殊性"；sensibility 才是"敏感性"）
+   - adverse event = 不良事件，side effect = 副作用（**不可混用**）
+   - label = 说明书（FDA label = 药品说明书）；off-label = 超说明书用药
+   - approval = 获批（不是"批准书"）；clearance = 通过（器械许可）
+   - recall = 召回；withdrawal = 撤回；black box warning = 黑框警告
+   - placebo = 安慰剂；blinded = 盲法；randomized = 随机
+   - discharge = 出院（临床语境）/ 分泌物（病理语境，看上下文）
+   - dose = 剂量；dosing = 给药方案；dosage regimen 同上
+   - progression = 进展（疾病进展），不是"进程/进步"
 
 2. 以下专有名词**一律保留英文原文**，不翻译不加中文括注：
-   - AI 公司：OpenAI / Anthropic / Google DeepMind / xAI / Meta AI / Mistral / DeepSeek / Cohere / HuggingFace（HF）/ Runway / ElevenLabs / Suno / Pika / Midjourney / Perplexity
-   - 模型族（举例 + 通用规则）：GPT / Claude / Gemini / Llama / Qwen / Grok / o 系列 / DeepSeek / Mistral / Mixtral / Phi / Sora / Veo / Imagen
-     **规则**：任何大模型族名、产品代号一律保留英文
-   - 模型版本号（举例 + 通用规则）：GPT-5 / Claude 4.7 / Claude Sonnet 4.6 / Llama 4 / Gemini 3 / o3 / o4 / DeepSeek-V4 / Qwen3.7
-     **规则**：版本号一字不改（包括字母数字后缀如 4o / 4.7 / 405B / V4 / R1），绝不"翻译性扩写"（不要把 "405B" 译成 "4050 亿"，不要把 "V4" 译成 "第 4 代"）
-   - 技术缩写（举例 + 通用规则）：LLM / RAG / RLHF / DPO / LoRA / QLoRA / PEFT / MoE / CoT / ReAct / KV cache / SOTA / AGI / MCP / ADK / NPU / GPU / TPU
-     **规则**：任何 2-5 字母的全大写缩写，默认按 AI/ML 含义保留英文
-   - 评测基准（举例 + 通用规则）：MMLU / GPQA / HumanEval / SWE-bench / SWE-bench Verified / AIME / HLE / ARC-AGI / ARC-AGI 2 / MT-Bench / Chatbot Arena / Aider Polyglot / LiveCodeBench
-     **规则**：以 -bench / -eval 结尾或全大写的评测名一律保留英文
-   - AI 工具/产品：Cursor / Copilot / Codex / Aider / Devin / Cline / Claude Code / Windsurf / Zed / v0 / Bolt / Lovable / Replit Agent
-   - Agent 框架：LangChain / LangGraph / LlamaIndex / CrewAI / AutoGen / Pydantic AI / Vercel AI SDK / DSPy
-   - 推理/部署：Ollama / vLLM / SGLang / TensorRT / Triton / CUDA / ROCm
-   - 通用技术：API / SDK / CLI / IDE / SaaS / CDN / SSO / OAuth / JWT / WebSocket / SSE / gRPC
+   - 靶点与分子：PD-1 / PD-L1 / CTLA-4 / EGFR / ALK / HER2 / KRAS G12C / BRAF / BCMA / CD19 / CD20 / VEGF / TNF-α / GLP-1 / GIP / SGLT2 / IL-6 / PCSK9 / TROP2 / Claudin 18.2
+   - 统计与研究缩写：RCT / OS / PFS / DFS / ORR / DOR / HR / RR / OR / CI / AE / SAE / ITT / mITT / NNT / BMI / ECOG / PS
+   - 监管与学会缩写：FDA / EMA / NMPA / CDE / WHO / CDC / NIH / NICE / ASCO / ESMO / AACR / AHA / ESC / ADA / EASD / NCCN / CSCO / NCI
+   - 试验代号：KEYNOTE-189 / CheckMate 227 / DESTINY-Breast04 / RECOVERY / SOLIDARITY / CTONG 系列等，**连字符与数字一字不改**
+   - 技术与检测：ctDNA / NGS / PCR / MRI / CT / PET-CT / NGS / CAR-T / mRNA / AAV / CRISPR / ADC / siRNA
+   - 期刊名与分级：NEJM / The Lancet / JAMA / BMJ / Nature Medicine（期刊名保留英文）
+   **规则**：任何 2–6 字母的全大写缩写，默认按医学含义保留英文；不确定含义时保留英文，不要猜译。
 
-3. 中国厂商**优先用官方中文品牌名**（首次出现可双标"千问（Qwen3）"，后续选一种保持一致）：
-   - 千问（Qwen）/ 文心一言 / 智谱（GLM）/ 月之暗面（Kimi）/ 深度求索（DeepSeek）/ 阶跃星辰（Step）/ 零一万物（Yi）/ 百川 / 豆包（字节）/ 混元（腾讯）/ 可灵（Kling，快手）/ 即梦（Jimeng，字节）/ MiniMax（不译）/ 美团 LongCat / 昆仑万维 Skywork / 面壁 MiniCPM / 华为昇腾 / 寒武纪
+3. 药物与公司名：
+   - 跨国药企优先用官方中文名（辉瑞／默沙东／罗氏／诺华／阿斯利康／赛诺菲／礼来／诺和诺德／强生／拜耳／武田／葛兰素史克），首次出现可双标"默沙东（Merck）"；
+   - 药物：国内已有通用中文名的用中文（阿司匹林、二甲双胍、奥希替尼、司美格鲁肽、帕博利珠单抗）；**没有通行中文名的保留英文商品名/代号**（如 ADC 代号、早期代号 XYZ-101），不要自造译名；
+   - 商品名与通用名不要混用：原文写商品名（Keytruda）就写商品名，原文写通用名（pembrolizumab）就写通用名；原文同时给出时两者都保留。
 
-4. 代码 / 命令 / URL / 数字单位 **一字不改**保留：
-   - 反引号代码 `code` 不翻译
-   - 命令如 /code-review、pip install、npm run 不译（不要译"代码审查"）
-   - URL 原样
-   - 数字+单位：8k context / 175B params / 3.5x speedup / $3 per M tokens / 99.9%
-   - 金额、参数量、比例、区间必须保留原文的阿拉伯数字和单位；不要把 $10B-$100B 改写成“数百亿至数千亿美元”等中文数量词
+4. 数字、单位、统计量**一字不改**，尤其禁止"翻译性换算"：
+   - 保留原文写法：800 例 / 3.2 个月 / HR 0.72 / 95% CI 0.61–0.85 / p<0.001 / 5 mg 每日一次 / 12.5% / 2 年 OS 率 62%
+   - **不得**把 "HR 0.72" 改写成"风险降低 28%"（除非原文自己这么写）；**不得**把 "p=0.03" 改写成"显著改善"；**不得**把 "非劣效"（non-inferiority）改写成"同样有效"；**不得**把 "did not meet the primary endpoint" 弱化成"结果不理想"。
+   - 期别照抄：Phase 1/2/3 = 一期/二期/三期（也可写 1/2/3 期），preclinical = 临床前，first-in-human = 首次人体试验。
+
+5. 证据等级词必须原样保留，不得升级：preprint = 预印本（未经同行评议）、conference abstract = 会议摘要、interim analysis = 中期分析、exploratory endpoint = 探索性终点、retrospective = 回顾性、observational = 观察性、single-arm = 单臂、in vitro = 体外、in vivo（动物）= 动物实验、case series = 病例系列。摘要里必须至少出现一次能表明证据类型或阶段的说法。

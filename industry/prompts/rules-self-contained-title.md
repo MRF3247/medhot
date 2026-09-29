@@ -1,10 +1,14 @@
 
 【标题自洽规则 — 让读者不点开就知道"这是关于谁的什么事"】
 
-1. 标题必须点出核心主体：模型名 / 产品名 / 公司名 / 项目名。
+1. 标题必须点出核心主体：药物名（通用名或商品名，按原文）、研究方法或试验名、机构名、疾病与适应证。只有"某项研究显示"而没有主体的标题不合格。
 2. 原标题已经清楚点出主体的：英文标题翻译成中文、中文标题保持原意，不要为改写而改写。
-3. 原标题只是版本号 / 代号 / 没信息量的 teaser（如 "v2.1.159"、"Small is a feature"、"Day 1"、"重磅发布"）时，结合【来源】和正文把主体补进标题。例：原标题 "v2.1.159" + 来源 "Claude Code：GitHub Releases" → "Claude Code v2.1.159 发布"。
-4. 补主体只能用【来源】或正文里真实出现的名字。正文和来源都没点出具体型号时，用上位词（如"开源多模态模型"）兜底，绝不凭"行业常识"编一个具体型号 / 版本 / 数字。
-5. 原标题表达的【文章类型和核心动作】是硬边界：How / Why / Guide / Analysis / Review / Benchmark 这类解释、分析、教程或评测标题，中文标题必须保留这个类型；不能因为正文谈到一个已经存在的模型、产品或新数据，就改写成“发布 / 推出 / 上线 / 开源”。只有原标题明确宣布了发布、推出、上线或开源，中文标题才能使用对应动作。保留文章类型不等于删主体：仍须按第 1-4 条补全正文或来源明确给出的公司、产品、项目名。
-   例：原标题 "How GPT-5.6 fuses frontier intelligence with frontier efficiency" → "GPT-5.6 如何兼顾前沿智能与效率"，不能写成 "OpenAI 发布 GPT-5.6"。
-   例：原标题 "How to build interactive experiences with canvases" + 来源和正文明确是 GitHub Copilot → "GitHub Copilot 如何用 canvases 构建交互体验"，不能只写成缺主体的 "如何用 canvases 构建交互体验"。
+3. 原标题只是代号 / 无信息量的 teaser（如 "Study finds"、"New data"、"Breaking"、"结果公布"）时，结合【来源】和正文把主体补进标题。例：原标题 "New data" + 来源 "NEJM" + 正文为某药三期结果 → "某药三期试验结果发表于 NEJM"。
+4. 补主体只能用【来源】或正文里真实出现的名字。正文和来源都没点出具体药物、适应证或机构时，用上位词（如"某 GLP-1 药物"）兜底，绝不凭"医学常识"编一个具体药名、例数或临床期别。
+5. **动作词是硬边界**：
+   - 只有原文明确写出 "approved"（获批）/ "authorized" 才能用"获批"；protocol、regulatory submission（申报）、filing 只能写"递交申请/进入审评"，不能写"获批"。
+   - 只有原文明确写出 "met the primary endpoint" 才能写"达到主要终点"；"trend toward improvement"（呈改善趋势）"numerically higher"（数值上更高）不能写成"有效"。
+   - "associated with"（相关）不能写成"导致/降低"；"in mice"（小鼠）不能写成"在患者中"；preprint 不能写成"发表"。
+   - 例：原标题 "Drug X shows promising activity in early trial" → "某药早期试验显示初步活性"，不能写成"某药显著有效"或"某药获批"。
+   - 例：原标题 "Association between A and B in a cohort study" → "队列研究显示 A 与 B 相关"，不能写成 "A 导致 B"。
+6. 标题里不写影响因子、不写期刊等级、不写"顶刊"（除非本就是要报道期刊本身）；不写"重磅""神药""奇迹"。
