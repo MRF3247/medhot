@@ -27,7 +27,7 @@ const MARKERS = ["CLEAR", "RESCUE", "LOW", "OFFTOPIC", "BARE", "VAGUE", "THIN", 
 const scoreAnswers: Record<string, number[]> = { CLEAR: [78, 72], RESCUE: [56, 50], LOW: [45, 40], THIN: [70, 70], SENSITIVE: [80, 80], 推文: [40, 40], BARE: [30, 34], VAGUE: [60, 62] };
 
 const stepOf = (system: string, user: string): Step =>
-  system.includes("宽召回的AI相关性预筛") ? "prefilter" : system.includes("事件注意力评分器") ? "score"
+  system.includes("宽召回的医学相关性预筛") ? "prefilter" : system.includes("事件注意力评分器") ? "score"
   : system.includes("内容理解编辑") ? "understand" : system.includes("资料结构化助手") ? "structure"
   : user.includes("title_zh") ? "summarize" : (() => { throw new Error("unknown request"); })();
 
@@ -45,9 +45,9 @@ const provider = await stub((_hit, req) => {
   if (step === "score") return answer({ attentionScore: scoreAnswers[marker]!.shift() });
   if (step === "understand") {
     if (marker === "SENSITIVE") return new Reply(400, { contentFilter: [{ level: 1, role: "user" }], error: { code: "1301", message: "系统检测到输入或生成内容可能包含不安全或敏感内容" } });
-    return answer({ itemType: "trial_result", authorRole: "principal", tags: ["前沿研究", "开源", "Agent", "不存在的标签"], editorialJudgment: `理由 ${marker}`, titleZh: `理解标题 ${marker}`, summaryZh: `理解摘要 ${marker}。第二句补充一个关键数字。` });
+    return answer({ itemType: "trial_result", authorRole: "principal", tags: ["研究", "临床试验", "肿瘤", "不存在的标签"], editorialJudgment: `理由 ${marker}`, titleZh: `理解标题 ${marker}`, summaryZh: `理解摘要 ${marker}。第二句补充一个关键数字。` });
   }
-  if (step === "structure") return answer({ category: "research", tags: ["前沿研究", "推理"], subjects: ["anthropic", "unknown-co"], fact: { title: `事实 ${marker}`, subject: "某公司", action: "发布", object: "模型", occurredAt: null } });
+  if (step === "structure") return answer({ category: "research", tags: ["前沿研究", "肿瘤"], subjects: ["fda", "unknown-co"], fact: { title: `事实 ${marker}`, subject: "某机构", action: "发布", object: "研究", occurredAt: null } });
   return answer(`title_zh: 翻译标题 ${marker}\nsummary_zh: 翻译摘要 ${marker}。第二句补充影响。`);
 });
 for (const env of ["DASHSCOPE_BASE_URL", "ZHIPU_BASE_URL", "DEEPSEEK_BASE_URL"]) process.env[env] = `${provider.url}/v1`;
@@ -88,7 +88,7 @@ test("every prompt in the pack renders, and the site's name replaces AIHOT's", (
     const text = promptText(file.slice(0, -3), values);
     assert.ok(text.length > 20 && !/\{\{/.test(text), file);
   }
-  assert.ok(PREFILTER_SYSTEM.startsWith(`为${SITE.name}做宽召回的AI相关性预筛`));
+  assert.ok(PREFILTER_SYSTEM.startsWith(`为 ${SITE.name} 做宽召回的医学相关性预筛`));
 });
 
 test("a selected item: prefilter, two scores, the content understanding and the structure", async () => {
@@ -99,8 +99,8 @@ test("a selected item: prefilter, two scores, the content understanding and the 
   assert.deepEqual(calls("CLEAR").sort(), ["prefilter", "score", "score", "structure", "understand"]);
   const r = await row(id);
   assert.deepEqual([r.title_zh, r.reason_zh, r.category, r.receipt_ids.length], ["理解标题 CLEAR", "理由 CLEAR", "research", 5]);
-  assert.deepEqual(r.tags, ["前沿研究", "开源/仓库", "Agent", "Anthropic"], "vocabulary tags (synonyms mapped, unknown dropped) and the subject's tag");
-  assert.deepEqual(r.subjects, ["anthropic"]);
+  assert.deepEqual(r.tags, ["前沿研究", "临床试验", "肿瘤", "FDA"], "vocabulary tags (synonyms mapped, unknown dropped) and the subject's tag");
+  assert.deepEqual(r.subjects, ["fda"]);
   assert.deepEqual([r.output.writer, r.output.itemType, r.output.prefilter.label, r.output.fact.title], ["understand", "trial_result", "PASS", "事实 CLEAR"]);
   const score = requests.find((q) => q.marker === "CLEAR" && q.step === "score")!;
   assert.match(score.user, /【标题】\nCLEAR model release/, "the score reads the original title, before any writing");
@@ -122,7 +122,7 @@ test("a near-selected item is written like a selected one; below the floor it is
   const summarize = requests.find((q) => q.marker === "LOW" && q.step === "summarize")!;
   assert.equal(summarize.body.messages.length, 1, "the title/summary prompt is one user message");
   assert.equal(summarize.body.response_format, undefined, "answered in its own text format");
-  assert.deepEqual((await row(lowId)).tags, ["前沿研究", "推理", "Anthropic"], "structure tags");
+  assert.deepEqual((await row(lowId)).tags, ["前沿研究", "肿瘤", "FDA"], "structure tags");
 });
 
 test("the prefilter's BLOCK stops everything; UNKNOWN goes on like PASS", async () => {
@@ -174,12 +174,12 @@ test("a short post in Chinese is its own copy; a content-filter refusal is trans
 });
 
 test("guards: a company the input does not name is not written in; long summaries are cut at sentences", () => {
-  const input = { title: "某实验室发布新模型", text: "某实验室发布了一个新模型，参数规模和价格都有说明。", sourceKind: "rss" };
-  const guarded = enforceIdentity(input, { titleZh: "OpenAI 发布新模型", summaryZh: "某实验室发布新模型。" });
-  assert.deepEqual([guarded.titleZh, guarded.summaryZh, guarded.identityGuard.outcome], ["某实验室发布新模型", "某实验室发布新模型。", "fallback"]);
+  const input = { title: "某实验室发布一项新药研究", text: "某实验室发布了一项新药研究，样本量、剂量与主要终点都有说明。", sourceKind: "rss" };
+  const guarded = enforceIdentity(input, { titleZh: "辉瑞发布新药研究", summaryZh: "某实验室发布新药研究。" });
+  assert.deepEqual([guarded.titleZh, guarded.summaryZh, guarded.identityGuard.outcome], ["某实验室发布一项新药研究", "某实验室发布新药研究。", "fallback"]);
   // The identity lexicon: a Chinese rendering of a company the input names in English is no invention.
-  const alibaba = { title: "Alibaba ships a new coding model", text: "Alibaba released a coding model with pricing details.", sourceKind: "rss" };
-  assert.equal(enforceIdentity(alibaba, { titleZh: "阿里巴巴发布编程模型", summaryZh: "阿里巴巴发布了编程模型并公布价格。" }).identityGuard.outcome, "pass");
+  const pfizer = { title: "Pfizer reports phase 3 results for a rare disease drug", text: "Pfizer released phase 3 data with dosing and pricing details.", sourceKind: "rss" };
+  assert.equal(enforceIdentity(pfizer, { titleZh: "辉瑞公布罕见病药物 3 期结果", summaryZh: "辉瑞公布了 3 期研究的主要终点结果。" }).identityGuard.outcome, "pass");
   const long = "第一句交代了谁做了什么以及关键结果，这一句本身已经足够说明核心事件的来龙去脉。".repeat(3) + "第二句补充数字。".repeat(20);
   assert.ok(compactAnswerFirstSummary(long).length <= 190);
   assert.deepEqual(parseTranslateOutput("title_zh: 标题\nsummary_zh: 第一句。\n第二句。"), { titleZh: "标题", summaryZh: "第一句。\n第二句。", bodyZh: "" });

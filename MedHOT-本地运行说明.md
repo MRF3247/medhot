@@ -88,6 +88,17 @@ cd /Users/Jin/Documents/GitProgram/MedHOT
    看准确率与不同门槛下的表现，再回改 `selection-score.md`（先改标准，再动门槛）。
 2. **中文信源接入**（见上）。另可配 `EMBEDDING_*`（或 `DASHSCOPE_API_KEY`）让事件归组多一路向量召回——不配也能跑，只是归组少一路线索。
 
+## 自测（改过行业包后跑一遍）
+
+```bash
+# 测试要用一个干净的库；反复用同一个库跑会因为上一轮留下的日报数据而误报失败
+PGBIN=/Users/Jin/pgsql/16/bin
+$PGBIN/dropdb -h 127.0.0.1 -p 5433 -U postgres medhot_test; $PGBIN/createdb -h 127.0.0.1 -p 5433 -U postgres medhot_test
+DATABASE_URL="postgres://postgres@127.0.0.1:5433/medhot_test" node scripts/migrate.ts
+DATABASE_URL="postgres://postgres@127.0.0.1:5433/medhot_test" npm test    # 136 项，约 4 分钟
+npm run typecheck
+```
+
 ## 已知限制
 
 - 事件归组目前只有词面/规则线索（没配向量模型），同一件事的跨语言报道可能归不到一起。
