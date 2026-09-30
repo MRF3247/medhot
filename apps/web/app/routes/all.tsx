@@ -1,4 +1,5 @@
 import { SITE, withSubject } from "@aihot/industry/site";
+import { SOURCE_SECTIONS } from "@aihot/industry/taxonomy";
 import { Link, useLoaderData, useNavigation, useSearchParams } from "react-router";
 import type { Route } from "./+types/all";
 import type { PoolResponse } from "@aihot/contracts/site";
@@ -22,8 +23,10 @@ export async function loader({ request }: Route.LoaderArgs) {
   const tab = url.searchParams.get("tab") === "relevance" ? "relevance" : null;
   // Legacy deep-paging parameters (deep, anchorAt) still open a normal page.
   const page = Math.min(Math.max(Number.parseInt(url.searchParams.get("page") ?? "1", 10) || 1, 1), 50);
+  // 预印本等信源分区不在全部动态里混排：只在底部提示条数，点进各自的页面看。
+  const section = SOURCE_SECTIONS[0];
   const data = await loadOr404<PoolResponse>(
-    `/api/site/pool${queryString({ channel: channel === "all" ? null : channel, category, tag, q, tab, page: page > 1 ? page : null })}`,
+    `/api/site/pool${queryString({ channel: channel === "all" ? null : channel, category, tag, q, tab, page: page > 1 ? page : null, excludeSourceTag: section?.tag })}`,
     { signal: request.signal, busyRedirect: "/all/search-busy" },
   );
   return { data };
@@ -61,6 +64,7 @@ export default function AllPage() {
   const [params] = useSearchParams();
   const navigation = useNavigation();
   const f = data.filters;
+  const section = SOURCE_SECTIONS[0];
   const busy = navigation.state === "loading" && navigation.location?.pathname === "/all";
   const keep = { channel: f.channel === "all" ? null : f.channel, category: f.category };
   const searchTabHref = (tab: "time" | "relevance") => {
@@ -135,6 +139,17 @@ export default function AllPage() {
           <DayList items={data.items} todayCount={f.q ? null : data.todayCount} showTags />
         )}
       </div>
+      {!f.q && section && data.hiddenTodayCount > 0 && (
+        <Link
+          to={section.path}
+          className="mt-4 flex items-center justify-between gap-3 rounded-control border border-line-soft bg-bg-sunk px-4 py-3 text-[13px] leading-relaxed text-ink-3 hover:border-line-strong"
+        >
+          <span>
+            另有 <span className="num">{data.hiddenTodayCount}</span> 条{section.label}更新（未经同行评议，单独收录，不进精选与日报）
+          </span>
+          <span className="shrink-0 font-medium text-accent">查看 →</span>
+        </Link>
+      )}
       <Pagination page={data.page} pageCount={data.pageCount} href={(p) => pageHref(params, p)} />
       {data.page >= 50 && <p className="mt-4 text-center text-[12px] text-ink-4">最多提供 50 页，更早的内容请使用搜索或主题页。</p>}
     </div>

@@ -131,10 +131,11 @@ export async function collectSource(sourceId: string, opts: { force?: boolean } 
     const backfillMonths = Number(source.config._aihot?.initialBackfillMonths ?? 12);
     if (firstImport) {
       const cutoff = Date.now() - backfillMonths * 30 * 86400000;
-      candidates = candidates.filter((c) => !c.publishedAt || c.publishedAt.getTime() >= cutoff).slice(0, backfillLimit);
+      candidates = candidates.filter((c) => !c.publishedAt || c.publishedAt.getTime() >= cutoff).slice(0, Math.min(backfillLimit, maxItemsPerRun(source.config, MAX_ITEMS_PER_RUN)));
     } else if (source.kind !== "x_search") {
       // X keeps every post it read: its watermark already covers them, so a cut here would lose them.
-      candidates = candidates.slice(0, MAX_ITEMS_PER_RUN);
+      // 预印本这类「量大但低价值」的源可以在 config._aihot.maxItemsPerRun 调小每次导入量。
+      candidates = candidates.slice(0, maxItemsPerRun(source.config, MAX_ITEMS_PER_RUN));
     }
 
     // Detail pages only for material we have not seen (bounded per run), and only for what the listing lacks.
@@ -337,6 +338,21 @@ export async function scheduleDueSources(limit = Number(process.env.FETCH_SCHEDU
 }
 
 /**
+ * Per-source interval lock: sources whose value should not be auto-tuned (预印本等「量大但价值低」的源，
+ * 自动策略会按产量把它们调到最短 15 分钟）。配置 industry/sources.json 的 config._aihot.intervalMinutesLock。
+ */
+export function intervalLockMinutes(config: unknown): number | null {
+  const raw = Number((config as { _aihot?: { intervalMinutesLock?: unknown } } | null)?._aihot?.intervalMinutesLock);
+  return Number.isFinite(raw) && raw >= 5 && raw <= 1440 ? Math.round(raw) : null;
+}
+
+/** Per-run import cap: a firehose feed (预印本) may import fewer items per check. */
+export function maxItemsPerRun(config: unknown, fallback: number): number {
+  const raw = Number((config as { _aihot?: { maxItemsPerRun?: unknown } } | null)?._aihot?.maxItemsPerRun);
+  return Number.isFinite(raw) && raw >= 1 ? Math.min(Math.round(raw), fallback) : fallback;
+}
+
+/**
  * Daily: adapt each source's interval to its recent output (active 15 min … quiet 120 min).
  * hot_signal sources are allowed to be slower.
  */
@@ -355,7 +371,8 @@ export async function adaptIntervals(): Promise<{ updated: number }> {
     // Listings read through Jina are not looked at more than hourly: busy ones would outrun its daily budget.
     const min = r.paid_listing ? 60 : 15;
     // X accounts read by shard follow the shard's pace, whatever their own volume.
-    const target = shardHandle(r) ? shardMinutes(r.participation_mode) : perDay <= 0.15 ? max : Math.round(Math.min(max, Math.max(min, (24 * 60) / (perDay * 3))));
+    const target = intervalLockMinutes(r.config)
+      ?? (shardHandle(r) ? shardMinutes(r.participation_mode) : perDay <= 0.15 ? max : Math.round(Math.min(max, Math.max(min, (24 * 60) / (perDay * 3)))));
     const res = await sql`UPDATE sources SET interval_minutes = ${target} WHERE id = ${r.id} AND interval_minutes <> ${target}`;
     updated += res.count;
   }

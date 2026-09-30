@@ -251,13 +251,16 @@
       "config": {
         "feedUrl": "https://connect.medrxiv.org/medrxiv_xml.php?subject=all",
         "_aihot": {
-          "initialBackfillLimit": 6
-        }
+          "initialBackfillLimit": 3,
+          "intervalMinutesLock": 240,
+          "maxItemsPerRun": 10
+        },
+        "sortByPublishedAt": true
       },
       "tier": "T1_5",
       "first_party": false,
       "participation_mode": "editorial",
-      "interval_minutes": 180,
+      "interval_minutes": 240,
       "tags": [
         "预印本"
       ],
@@ -271,13 +274,16 @@
       "config": {
         "feedUrl": "https://connect.biorxiv.org/biorxiv_xml.php?subject=all",
         "_aihot": {
-          "initialBackfillLimit": 5
-        }
+          "initialBackfillLimit": 3,
+          "intervalMinutesLock": 240,
+          "maxItemsPerRun": 10
+        },
+        "sortByPublishedAt": true
       },
       "tier": "T1_5",
       "first_party": false,
       "participation_mode": "editorial",
-      "interval_minutes": 180,
+      "interval_minutes": 240,
       "tags": [
         "预印本"
       ],

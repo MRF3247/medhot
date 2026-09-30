@@ -35,6 +35,15 @@ export const CATEGORY_TAGS = [
   "医学教育", "科研诚信", "其他",
 ] as const;
 
+/**
+ * 信源分区：预印本（未经同行评议）单独收，不与新闻混排。
+ * sources.json 里预印本源打的就是这个 tag（Europe PMC 之外的 medRxiv / bioRxiv）。
+ * 全部动态默认排除，底部只提示「另有 N 条」；单独成页 /preprints。
+ */
+export const SOURCE_SECTIONS = [
+  { tag: "预印本", path: "/preprints", label: "预印本" },
+] as const;
+
 /** 可选的主题标签（疾病领域与学科方向）。 */
 export const TOPIC_TAGS = [
   "肿瘤", "心血管", "神经与精神", "感染与疫苗", "代谢与内分泌", "免疫与炎症", "呼吸", "消化与肝病",

@@ -3,8 +3,8 @@ import type { PoolResponse, TimelineFilters } from "@aihot/contracts/site";
 import { beijingDate, beijingMidnight } from "@aihot/contracts/time";
 import { one, sql, withCustomPlans, type Db } from "../db.ts";
 import {
-  categoryCondition, channelCondition, ITEM_COLUMNS, ITEM_FROM, listedCondition, tagCondition, toFeedItemSummary, topicCondition,
-  type ItemRow,
+  categoryCondition, channelCondition, ITEM_COLUMNS, ITEM_FROM, listedCondition, sourceIdsCondition, tagCondition, toFeedItemSummary,
+  topicCondition, type ItemRow,
 } from "./items.ts";
 
 export const POOL_PAGE_SIZE = 40;
@@ -107,6 +107,9 @@ export interface PoolQuery extends TimelineFilters {
   tab?: "time" | "relevance";
   page?: number;
   topicTags?: string[] | null;
+  /** 信源分区：只用某些来源（"only"）或排除它们（"exclude"）。 */
+  sourceIds?: string[] | null;
+  sourceMode?: "only" | "exclude" | null;
   now?: Date;
 }
 
@@ -116,11 +119,13 @@ export async function loadPool(query: PoolQuery): Promise<PoolResponse> {
   const q = query.q?.trim() || null;
   const tab = q && query.tab === "relevance" ? "relevance" : "time";
   const terms = q ? searchTerms(q) : [];
-  const filters = sql`${channelCondition(query.channel)} ${categoryCondition(query.category)} ${tagCondition(query.tag)} ${topicCondition(query.topicTags)}`;
+  // baseFilters 不含信源分区，排除时用它算「另有 N 条…」的条数。
+  const baseFilters = sql`${channelCondition(query.channel)} ${categoryCondition(query.category)} ${tagCondition(query.tag)} ${topicCondition(query.topicTags)}`;
+  const filters = sql`${baseFilters} ${sourceIdsCondition(query.sourceIds, query.sourceMode)}`;
   const offset = (page - 1) * POOL_PAGE_SIZE;
   const cap = POOL_MAX_PAGES * POOL_PAGE_SIZE;
   // A fixed clock (tests, replays) never shares cached totals.
-  const filterKey = query.now ? null : JSON.stringify([query.channel, query.category, query.tag, query.topicTags ?? null]);
+  const filterKey = query.now ? null : JSON.stringify([query.channel, query.category, query.tag, query.topicTags ?? null, query.sourceMode ?? null, query.sourceIds ?? null]);
 
   // Searches go through pool_search (eligible items only): trigram indexes for longer terms, a small
   // table to scan for one- and two-character ones.
@@ -190,18 +195,26 @@ export async function loadPool(query: PoolQuery): Promise<PoolResponse> {
 
   const { rows, total } = q ? await withSearchCapacity(run) : await run(sql);
   const today = beijingDate(now);
-  const meta = one(await sql<{ today_count: number; updated_at: Date | null }[]>`
+  // 被信源分区排除掉的内容（「另有 N 条预印本更新」）：只在排除时算，且与当前筛选一致。
+  const hiddenCondition = query.sourceMode === "exclude" ? sourceIdsCondition(query.sourceIds, "only") : sql`AND FALSE`;
+  const meta = one(await sql<{ today_count: number; hidden_count: number; updated_at: Date | null }[]>`
     SELECT (SELECT count(*) FROM publications p
       WHERE ${listedCondition(now)} AND p.eligible AND p.timeline_at >= ${beijingMidnight(today)} ${filters}) AS today_count,
+      (SELECT count(*) FROM publications p
+      WHERE ${listedCondition(now)} AND p.eligible AND p.timeline_at >= ${beijingMidnight(today)} ${baseFilters} ${hiddenCondition}) AS hidden_count,
       (SELECT max(p.updated_at) FROM publications p WHERE p.eligible) AS updated_at`);
 
   return {
-    filters: { channel: query.channel, category: query.category, tag: query.tag, topic: query.topic ?? null, q, tab },
+    filters: {
+      channel: query.channel, category: query.category, tag: query.tag, topic: query.topic ?? null, q, tab,
+      sourceMode: query.sourceMode ?? null,
+    },
     items: rows.map(toFeedItemSummary),
     page,
     pageCount: Math.min(POOL_MAX_PAGES, Math.max(1, Math.ceil(total / POOL_PAGE_SIZE))),
     total,
     todayCount: Number(meta.today_count),
+    hiddenTodayCount: Number(meta.hidden_count),
     freshness: (meta.updated_at ?? now).toISOString(),
     generatedAt: now.toISOString(),
   };
