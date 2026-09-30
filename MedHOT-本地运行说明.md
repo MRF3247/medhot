@@ -60,6 +60,11 @@ cd /Users/Jin/Documents/GitProgram/MedHOT
 
 **压住**：药企新闻稿与卫星会推广（`sig ≤ 3`）、会议通知/征稿/招生/招聘/促销（`sig ≤ 2`）、泛健康养生与无出处的「某研究称」（`sig ≤ 3` 且 `cred ≤ 3`）、只有细胞或动物实验却给患者结论（`sig ≤ 3`）、只有会议摘要没有完整数据（`nov ≤ 3`）、多话题盘点（`sig ≤ 3`）、预印本（`cred ≤ 5` 且摘要必须点明未经同行评议）、无临床终点的器械装机与展会新闻。
 
+## 页面
+
+- 精选 `/` · 全部医学动态 `/all` · 热点榜 `/hot` · 医学日报 `/daily` · 主题 `/topics` · **预印本 `/preprints`** · 收藏 `/starred` · Agent 接入 `/agent` · 关于 `/about`
+- **预印本单独成区**：medRxiv / bioRxiv 不进「全部动态」的混排，全部动态底部只显示「另有 N 条预印本更新 →」；预印本自己的页面在 `/preprints`（导航「更多」里也有入口），页面明确标注未经同行评议、不进精选/热点榜/日报。
+
 ## 信源（59 个，均已实测可抓）
 
 - **期刊**（T1，官网一手）：Nature、Nature Medicine、Nature Biotechnology、Nature Reviews Cancer、NEJM、NEJM Evidence、The Lancet、The Lancet Oncology、The Lancet Infectious Diseases、JAMA、Cell、Science
