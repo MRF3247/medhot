@@ -121,12 +121,14 @@ export interface TimelineResponse {
 }
 
 export interface PoolResponse {
-  filters: TimelineFilters & { q: string | null; tab: "time" | "relevance" };
+  filters: TimelineFilters & { q: string | null; tab: "time" | "relevance"; sourceMode?: "only" | "exclude" | null };
   items: FeedItemSummary[];
   page: number;
   pageCount: number;
   total: number;
   todayCount: number;
+  /** 被信源分区（预印本等）排除掉的今日条数：「另有 N 条…」提示用；未启用分区时为 0。 */
+  hiddenTodayCount: number;
   freshness: string;
   generatedAt: string;
 }

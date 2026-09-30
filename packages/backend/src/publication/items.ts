@@ -108,6 +108,22 @@ export function topicCondition(topicTags: string[] | null | undefined) {
   return sql`AND p.tags && ${topicTags}::text[]`;
 }
 
+/**
+ * 信源分区（预印本等）：先按 sources.tags 圈出 source_id，再在 publication 上做集合判断，
+ * 避免逐行子查询。mode "only" 只留这些来源，"exclude" 把它们排除。
+ */
+export async function sourceIdsWithTag(tag: string): Promise<string[]> {
+  const rows = await sql<{ id: string }[]>`SELECT id FROM sources WHERE tags @> ${[tag]}::text[]`;
+  return rows.map((r) => r.id);
+}
+
+export function sourceIdsCondition(ids: readonly string[] | null | undefined, mode: "only" | "exclude" | null | undefined) {
+  if (!mode) return sql``;
+  // 没有匹配的信源时，"only" 必须是空集（否则会变成不过滤）。
+  if (!ids || ids.length === 0) return mode === "only" ? sql`AND FALSE` : sql``;
+  return mode === "only" ? sql`AND p.source_id = ANY(${[...ids]}::text[])` : sql`AND NOT (p.source_id = ANY(${[...ids]}::text[]))`;
+}
+
 function mediaView(m: Record<string, any>, mode: "card" | "thumb" | "full" = "thumb", responsive = false): MediaView | null {
   const url = proxiedImage(m.url, mode);
   if (!url) return null;

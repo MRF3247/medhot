@@ -6,6 +6,7 @@ import { isCategoryKey, isChannelKey, type CategoryKey, type ChannelKey } from "
 import { InvalidCursorError } from "@aihot/backend/lib/cursor";
 import { exportMarkdown, loadItemDetail, siteItemDetail } from "@aihot/backend/publication/detail";
 import { loadPool, SearchBusyError } from "@aihot/backend/publication/pool";
+import { sourceIdsWithTag } from "@aihot/backend/publication/items";
 import { loadTimeline } from "@aihot/backend/publication/timeline";
 import { loadStoryFollowups } from "@aihot/backend/publication/followups";
 import { loadDevelopments, loadGroupReports } from "@aihot/backend/publication/groups";
@@ -106,7 +107,13 @@ export function registerSite(app: FastifyInstance) {
     const page = Math.min(Math.max(Number(q.page) || 1, 1), 50);
     const search = q.q?.trim() ? q.q.trim().slice(0, 200) : null;
     const tab = q.tab === "relevance" ? "relevance" : "time";
-    const data = await loadPool({ ...filters, q: search, tab, page });
+    // 信源分区（预印本等）：?excludeSourceTag=预印本 排除，?sourceTag=预印本 只留。
+    const excludeTag = q.excludeSourceTag?.trim().slice(0, 30) || null;
+    const onlyTag = q.sourceTag?.trim().slice(0, 30) || null;
+    const sourceTag = excludeTag ?? onlyTag;
+    const sourceIds = sourceTag ? await sourceIdsWithTag(sourceTag) : null;
+    const sourceMode = excludeTag ? "exclude" as const : onlyTag ? "only" as const : null;
+    const data = await loadPool({ ...filters, q: search, tab, page, sourceIds, sourceMode });
     const { generatedAt: _, ...content } = data;
     return sendJsonWithEtag(req, reply, data, { etagPrefix: "pool", cacheControl: "public, max-age=60, s-maxage=60", etagOf: content });
   }));
