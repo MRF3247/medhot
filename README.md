@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
-    <img src="docs/assets/banner-light.png" alt="MedHOT：许多条医学信源流进中间的精选，再分给读者" width="100%">
+    <img src="docs/assets/banner-light.png" alt="MedHOT —— 值得关注的全球医学动态：采集 59 个医学信源，双评分精选与大事榜，每天 08:00 出日报" width="100%">
   </picture>
 </p>
 
