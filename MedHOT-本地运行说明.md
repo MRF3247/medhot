@@ -62,8 +62,8 @@ cd /Users/Jin/Documents/GitProgram/MedHOT
 
 ## 页面
 
-- 精选 `/` · 全部医学动态 `/all` · 热点榜 `/hot` · 医学日报 `/daily` · 主题 `/topics` · **预印本 `/preprints`** · 收藏 `/starred` · Agent 接入 `/agent` · 关于 `/about`
-- **预印本单独成区**：medRxiv / bioRxiv 不进「全部动态」的混排，全部动态底部只显示「另有 N 条预印本更新 →」；预印本自己的页面在 `/preprints`（导航「更多」里也有入口），页面明确标注未经同行评议、不进精选/热点榜/日报。
+- 精选 `/` · 全部医学动态 `/all` · 大事榜 `/hot` · 医学日报 `/daily` · 主题 `/topics` · **预印本 `/preprints`** · 收藏 `/starred` · Agent 接入 `/agent` · 关于 `/about`
+- **预印本单独成区**：medRxiv / bioRxiv 不进「全部动态」的混排，全部动态底部只显示「另有 N 条预印本更新 →」；预印本自己的页面在 `/preprints`（导航「更多」里也有入口），页面明确标注未经同行评议、不进精选/大事榜/日报。
 
 ## 信源（59 个，均已实测可抓）
 
