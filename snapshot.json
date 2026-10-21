@@ -886,7 +886,6 @@
   "/items/hwtogldbeh16qmv0kkwl41wpz",
   "/items/hxm2w5hu0sod57yb4o8ei8sdk",
   "/items/hyh2r999f2dm4ezqyvpasxfmr",
-  "/items/hyq6dwnhab4j669esf8d8as7f",
   "/items/hyvxzbughgs8jriqkfxh8oukz",
   "/items/i07h0b2kpqea7q64b6vu4qkto",
   "/items/i0r5s0fx7yr84h9khdkpgrr20",
@@ -1196,6 +1195,7 @@
   "/items/l0m1qc8epbef8n2vlxdw5wqq7",
   "/items/l0pp0tx6rdel08z42ljco18ad",
   "/items/l0tkc6z250670jfrcssuc4hjv",
+  "/items/l16ab4gnd6c7r5hfmauuxuhzx",
   "/items/l1ehx7ur473eskl09zbsze9ku",
   "/items/l23luq5p53zbw5j7ogqjbujm8",
   "/items/l24r5cx2pcel19t4oc8nqrm6r",
@@ -2651,6 +2651,7 @@
   "/items/z1dzmp4k420rs6v9vmwduhb76",
   "/items/z25dp8m2yhgd4rrp4y82j96xd",
   "/items/z2b0fedv4egz0t8s8pjbtniph",
+  "/items/z2cdmam94uujhvx8lcdjadrl2",
   "/items/z30iqp3ump4ce7h4vhacter4d",
   "/items/z352n4tgtuw6a0sqjdfmcggf6",
   "/items/z3n7cf9i3dzhrmmh7fas2p9j5",
@@ -2806,6 +2807,7 @@
   "/story/138075bd-dfa5-4319-9675-70a8854a1d2d",
   "/story/145bb478-f5ae-4eba-9d70-83c668fafa70",
   "/story/14d4502b-caa5-4a1a-99dc-e020bcfa7d79",
+  "/story/14de0782-ca7d-436b-be50-9867acf5181f",
   "/story/1506656c-a9b8-4c92-adf9-39c496cc76c4",
   "/story/15245d9a-8e1c-48d3-be71-51f780ae3628",
   "/story/16a79543-b34f-45ab-8955-7ad22f004f91",
@@ -2969,7 +2971,6 @@
   "/story/5190eace-cf49-4293-ae62-5d03cacf0651",
   "/story/51d62dd9-f178-4971-9f1a-e14cd81d7443",
   "/story/51f51fe0-1b11-4bb4-9328-1bf14b6b1c66",
-  "/story/52a8f9e1-e2ab-4bfd-8427-4e60dc580717",
   "/story/5427f1ae-7b77-4295-adc5-7bf01f062f1b",
   "/story/54d5a5dd-6ab8-496b-ade2-bed3152e96c7",
   "/story/55137db0-38fc-46f2-94ba-fa105cb19b7f",
@@ -3559,9 +3560,9 @@
   "/weekly/2026-W41",
   "/weekly/2026-W42"
  ],
- "count": 3558,
- "assets": 3453,
+ "count": 3559,
+ "assets": 3454,
  "prefix": "/medhot",
  "leftover_api_refs": 0,
- "seconds": 28.5
+ "seconds": 36.5
 }
