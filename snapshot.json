@@ -1499,6 +1499,7 @@
   "/items/me420hqus6m3l52yg6qtqj69m",
   "/items/me6ezqr446o5vawx573tutgzq",
   "/items/mecz8qffwzln96k3jbbqbfbvo",
+  "/items/meugt3gw93wq601uk2etyv3i9",
   "/items/mevfvcixgngb2isxlmg3r08jh",
   "/items/mf2euhhuabd546ywuach1vswv",
   "/items/mf61k76jf2fjdy0m2z5vbq1ja",
@@ -3707,7 +3708,6 @@
   "/story/cb77bea5-e956-4556-92c8-e061bcdddd14",
   "/story/cb9284d4-dabd-42b2-b21a-fb1cf76071eb",
   "/story/cc4366f4-b0dc-43b2-ab10-110f5a2b484c",
-  "/story/cd054b6d-9c40-43ec-a4f2-0f9495715ac4",
   "/story/cd1bedab-546d-4279-a261-7dc69c14d0fd",
   "/story/cd4fe0ca-8966-4e85-bbee-78a2ffe491d0",
   "/story/cda8bc52-f673-44bf-9a50-80d23649fc59",
@@ -3718,7 +3718,6 @@
   "/story/d12d210f-4537-4a58-ab13-b0b0ac05dc70",
   "/story/d14ef002-2d88-4ca4-9214-e19524f2246c",
   "/story/d1b97369-85e3-49e8-b8ac-5e9ddd3e1b44",
-  "/story/d230784d-86cf-4478-8199-ccace5d29877",
   "/story/d24366c0-baa1-4939-a70c-9ad05a21c45f",
   "/story/d2445a11-8f0e-4d64-95ff-fdbf81253c9b",
   "/story/d31459b5-2360-42f2-b052-6d1143f6e489",
@@ -3809,6 +3808,7 @@
   "/story/feb00f20-ca4b-4465-8280-a2e6fbd82408",
   "/story/ff6c60c2-818d-4ee4-8143-d4dd9f661fa0",
   "/story/ff7496ac-1a2a-4b92-a01d-e76d5ea1b731",
+  "/story/ff94207f-64fe-403a-92c8-9c88ce6d118b",
   "/story/ffb81875-5b7d-4432-a0fc-046f0dffb98c",
   "/terms",
   "/topics",
@@ -4005,5 +4005,5 @@
  "assets": 3850,
  "prefix": "/medhot",
  "leftover_api_refs": 0,
- "seconds": 37.6
+ "seconds": 39.3
 }
